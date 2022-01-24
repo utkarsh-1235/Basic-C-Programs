@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct node
+{
+int data;
+struct node *next;
+};
+void createlist(int m)
+{
+struct node*stnode=NULL,*fnode=NULL;
+stnode=(struct node*)malloc(sizeof(struct node));
+if(stnode==NULL)
+{
+printf("\t memory cannot be allocated \n");
+}
+else
+{  int data;
+printf("\t input the data for node 1 \n");
+scanf("%d",&data);
+stnode->data=data;
+stnode->next=NULL;
+for(int i=2;i<m;i++)
+{
+fnode=(struct node*)malloc(sizeof(struct node));
+if(fnode==NULL)
+{
+printf("\t memory cannot be allocated \n");
+}
+else
+{
+printf("\t input the data for node %d \n",i);
+scanf("%d",&data);
+fnode->data=data;
+fnode->next=NULL;
+stnode->next=fnode;
+
+}
+}
+}
+}
+void disp()
+{
+struct node*stnode,*fnode;
+printf("%d",stnode->data);
+while(fnode!=NULL)
+{
+printf("%d",fnode->data);
+fnode=fnode->next;
+}
+}
+void main()
+{
+int m;
+clrscr();
+printf("\t enter the node \n");
+scanf("%d",&m);
+createlist(m);
+disp();
+getch();
+}

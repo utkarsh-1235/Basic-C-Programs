@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<conio.h>
+struct student
+{
+int roll;
+char name[10];
+}struct={101,"raman"};
+main()
+{
+struct student stu2;
+printf("roll no.%d",stu1.roll);
+printf("name:%s",stu1.name);
+printf("enter the roll no. for second student");
+scanf("%d",&stu2.roll);
+printf("enter the namefor second student");
+scanf("%s",stu2.name);
+printf("student rollno.:%d",stu2.roll);
+scanf("student name:%s",stu2.name);
+getch();
+}

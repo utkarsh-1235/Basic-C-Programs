@@ -1,0 +1,30 @@
+ #include<stdio.h>
+ #include<conio.h>
+ #include<stdlib.h>
+ #include<time.h>
+ void main()
+ {
+ int number,guess,nguesses;
+ clrscr();
+ srand(time(0));
+ number=rand()%100;
+ do{
+ printf("guess the number");
+ scanf("%d",&guess);
+ if(number>guess)
+ {
+ printf("higher number \n");
+ }
+ else if(number<guess)
+ {
+ printf("lower number");
+ }
+ else
+ {
+ printf("you guessed it in %d \n",nguesses);
+ }
+ nguesses++;
+ } while(guess!=number);
+ getch();
+ }
+

@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+int sum(int);
+void main()
+{
+int i,n;
+clrscr();
+printf("enter the number");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+printf("%d \n",i);
+}
+sum (n);
+getch();
+}
+int sum(int x)
+{
+int c;
+if(x==0)
+{
+return 1;
+}
+else
+{
+c=x+sum(x-1);
+printf("SUM IS %d",c);
+return c;
+}
+}

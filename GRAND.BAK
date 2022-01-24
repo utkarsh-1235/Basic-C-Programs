@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct node
+{
+int data;
+struct node *link;
+};
+void print(struct node *n)
+{
+n=(struct node*)malloc(sizeof(struct node));
+while(n!=NULL)
+{
+printf("\t %d \n",n->data);
+n=n->link;
+}
+};
+void main()
+{
+struct node *head=NULL, *ptr=NULL, *middle=NULL, *last=NULL;
+clrscr();
+head   = (struct node*)malloc(sizeof(struct node));
+ptr    = (struct node*)malloc(sizeof(struct node));
+middle = (struct node*)malloc(sizeof(struct node));
+last   = (struct node*)malloc(sizeof(struct node));
+
+head->data=14;
+head->link=ptr;
+
+ptr->data=28;
+ptr->link=middle;
+
+middle->data=42;
+middle->link=last;
+
+last->data=56;
+last->link=NULL;
+
+print(head);
+getch();
+}

@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+struct student
+{
+char name ;
+int mark[20];
+int roll[20];
+};
+void main()
+{ struct student stu[20];
+int i,n;
+printf("how many students you want to enter the detail \n");
+scanf("%d",&n);
+printf ("enter the details of student \n");
+for(i=0;i<n;i++)
+{
+ printf("enter the name of %d student",i+1);
+ scanf("%s",stu[i].name);
+ printf("enter the roll number of %d student",i+1);
+ scanf("%d",stu[i].roll[i]);
+ printf("enter the marks of %d student",i+1);
+ scanf("%d",stu[i].mark[i]);
+ }
+for(i=0;i<n;i++)
+{
+//printf("name of %d student \n",i);
+printf("%s \n",stu[i].name);
+//printf("marks of %d student \n",i);
+printf("%d \n",stu[i].mark[i]);
+//printf("roll number of %d student \n",i);
+printf("%d \n",stu[i].roll[i]);
+}
+getch();
+}
+
+

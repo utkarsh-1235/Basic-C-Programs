@@ -1,0 +1,101 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct stack
+{
+int size;
+int *arr;
+int top;
+};
+int isfull(struct stack*sp)
+{
+if(sp->top==sp->size-1)
+{
+return 1;
+}
+else
+{
+return 0;
+}
+};
+int isempty(struct stack*sp)
+{
+if(sp->top==-1)
+{
+return 0;
+}
+else
+{
+return 1;
+}
+};
+void push(struct stack*sp,int val)
+{
+if(isfull(sp))
+{
+printf("\t stack is overflow \n");
+}
+else
+{
+sp->top++;
+sp->arr[sp->top]=val;
+}
+};
+int pop(struct stack*sp)
+{
+int val;
+if(isempty(sp))
+{
+printf("\t stack is underflow \n");
+return -1;
+}
+else
+{
+val=sp->arr[sp->top];
+sp->top--;
+return val;
+}
+};
+int parenthesisMatch(char*exp)
+{
+struct stack*sp;
+int i;
+for(i=0;exp[i]!='\0';i++)
+{
+if(exp[i]=='(')
+{
+push(sp,'(') ;
+}
+else if(exp[i]==')')
+{
+if(isempty(sp))
+{
+return 0;
+}
+pop(sp);
+}
+}
+if(isempty(sp))
+{
+return 1;
+}
+else
+{
+return 0;
+}
+};
+void main()
+{
+char*exp="(8*(9))" ;
+clrscr();
+if(parenthesisMatch(exp))
+{
+printf("\t the parenthesis is balanced \n");
+}
+else
+{
+printf("\t the parenthesis is not balanced \n");
+}
+getch();
+}
+

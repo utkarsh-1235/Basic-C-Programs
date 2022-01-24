@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+int fact(int);
+void main()
+{
+unsigned int i,n ,d;
+clrscr();
+printf("enter the number");
+scanf("%u",&n);
+for(i=1;i<=n;i++)
+{
+d=fact(i);
+printf("%u \n",d);
+}
+getch();
+}
+int fact(int x)
+{
+int c;
+if(x==0)
+{
+return 1;
+}
+else if(x==1)
+{
+return 1 ;
+}
+else if(x>1)
+{
+c=x*fact(x-1);
+//printf("%d \n",c);
+}
+return c;
+}

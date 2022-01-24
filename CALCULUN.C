@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<conio.h>
+int add(int,int);
+int sub(int,int);
+int mul(int,int);
+int div(int,int);
+int rem(int,int);
+void main()
+{
+int a,b,c,d,e,f,g;
+printf("enter two numbers");
+scanf("%d %d",&a,&b);
+add(a,b);
+sub(a,b);
+mul(a,b);
+div(a,b);
+rem(a,b);
+getch();
+}
+int add(int x,int y)
+{
+int c;
+c=x+y;
+printf(" addition is %d \n",c);
+return c;
+}
+
+int sub(int x,int y)
+{
+int d;
+d=x-y;
+printf("subtraction is %d \n",d);
+return d;
+}
+
+int mul(int x,int y)
+{
+int e;
+e=x*y;
+printf("multiplication is %d \n",e);
+return e;
+}
+
+int div(int x,int y)
+{
+int f;
+f=x/y;
+printf("division is %d \n",f);
+return f;
+}
+
+int rem(int x,int y)
+{
+int g;
+g=x%y;
+printf("remainder is %d \n",g);
+return g;
+}

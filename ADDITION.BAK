@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a,*x,b,*y,sum;
+clrscr();
+printf("enter two numbers ");
+scanf("%d %d",&a,&b);
+x=&a;
+y=&b;
+sum=*x + *y;
+printf("%d %d \n",*x,*y);
+printf("addition is %d \n",sum);
+getch();
+}

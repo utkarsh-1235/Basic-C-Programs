@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<conio.h>
+int swap(int*,int*);
+void main()
+{
+int a,*u,b,*v;
+clrscr();
+printf("enter two numbers");
+scanf("%d %d",&a,&b);
+printf("value of a before swapping is=>%d \n",a);
+printf("value of b before swapping is=>%d \n",b);
+u=&a;
+v=&b;
+swap(*u,*v);
+printf("value of a after swapping is=>%d \n",a);
+printf("value of b after swapping is= %d \n",b);
+getch();
+}
+int swap(*x,*y)
+{
+int t;
+t=*x;
+*x=*y;
+*y=t;
+printf("value of a during swapping is=>%d",&a);
+printf("value of b during swapping is=>%d",&b);
+return t;
+}

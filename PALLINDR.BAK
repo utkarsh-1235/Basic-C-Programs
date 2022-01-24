@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+char str1[100],str2[100];
+int l;
+clrscr();
+printf("\t enter the string1: \n");
+scanf("%s",str1);
+strcpy(str2,str1);
+strrev(str2);
+l=strcmp(str2,str1);
+if(l==0)
+{
+printf("\t it is apallindrome string \n");
+}
+else if(l>0||l<0)
+{
+printf("\t it is not a pallindrome string \n");
+}
+printf("\t reverse of the string is: %s \n",str2);
+getch();
+}

@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+char str[100];
+int i,j,l,count,temp,cur;
+char res;
+clrscr();
+gets(str);
+l=strlen(str);
+for(i=0;i<l;i++)
+{
+cur=1;
+for(j=i+1;j<l;j++)
+{
+if(str[i]==str[j])
+{
+count++;
+break;
+}
+if(str[i]!=str[j])
+break;
+cur++;
+if(cur>temp)
+{
+temp=cur;
+res=str[i];
+}
+}
+}
+printf("\t %c \n",str[i]);
+printf("\t %d \n",count);
+getch();
+}

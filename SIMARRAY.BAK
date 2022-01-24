@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i,j,a[3][3];
+clrscr();
+printf("enter the range");
+for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+scanf("count is =>%d",&a[3][3]);
+printf("%d",a[3][3]);
+}
+}
+getch();
+}

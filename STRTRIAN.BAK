@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+int l;
+char name[20];
+clrscr();
+printf("enter the string");
+scanf("%s",name);
+l=strlen(name);
+for(i=0;i<l;i++)
+{
+for(j=0;j<=i;j++)
+{
+printf("%d",name[j]);
+}
+printf("\n");
+}
+getch();
+}

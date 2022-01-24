@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+struct node{
+int data;
+struct node *link;
+};
+void print(struct node *n){
+while(n!=NULL)
+{
+printf("\t %d \n",n->data);
+n=n->link;
+}
+};
+void main()
+{
+struct node *utkarsh=NULL,*saumya=NULL,*sandhya=NULL,*sanjeev=NULL;
+clrscr();
+utkarsh=(struct node*)malloc(sizeof(struct node));
+saumya=(struct node*)malloc(sizeof(struct node));
+sandhya=(struct node*)malloc(sizeof(struct node));
+sanjeev=(struct node*)malloc(sizeof(struct node));
+utkarsh->data=14;
+utkarsh->link=saumya;
+saumya->data=03;
+saumya->link=sandhya;
+sandhya->data=12;
+sandhya->link=sanjeev;
+sanjeev->data=14;
+sanjeev->link=NULL;
+print(utkarsh);
+getch();
+}

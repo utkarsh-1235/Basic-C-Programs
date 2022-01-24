@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i,n,a[100],p,ins;
+clrscr();
+printf("\t enter the size of an array \n");
+scanf("%d",&n);
+printf("\t enter the elements \n");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("\t elements of array is \n");
+for(i=0;i<n;i++)
+{
+printf("\n %d \t",a[i]);
+}
+printf("enter the position of element\n");
+scanf("%d",&p);
+printf("\t enter the element for inserting \n");
+scanf("%d",&ins);
+//for(i=n;i>=p;i--)
+//n++;
+for(i=n;i>=p;i--)
+{
+a[i]=a[i-1];
+//a[p-1]=ins;
+}
+a[p-1]=ins;
+for(i=0;i<n+1;i++)
+{
+printf("\t %d \n",a[i]);
+}
+getch();
+}

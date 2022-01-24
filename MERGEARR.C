@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],b[100],c[100],i,j,k,s1,s2,s3;
+clrscr();
+printf("\t Merge two arrays of same size sorted in descending order \n");
+printf("\t enter the size of first array \n");
+scanf("%d",&s1);
+printf("\t enter the elements of first array \n");
+for(i=0;i<s1;i++)
+{
+//printf("\t element=>%d \n",i);
+scanf("%d",&a[i]);
+printf("\t %d \n",a[i]);
+}
+printf("\t enter the size of second array \n");
+scanf("%d",&s2);
+printf("\t enter the elements of second array \n");
+for(i=0;i<s2;i++)
+{
+//printf("\t element=>%d \n",i);
+scanf("%d",&b[i]);
+printf("\t %d \n",b[i]);
+
+}
+//size of merged array is size of first array and size of second array
+printf("\t Megred array \n");
+for(i=0;i<s1;i++)
+{
+c[i]=a[i];
+c[i+s2]=b[i];
+}
+s3=s1+s2;
+for(i=0;i<s3;i++)
+{
+printf("\t %d \n",c[i]);
+
+}
+for(j=0;j<s2;j++)
+{
+ c[i]=b[j];
+ i++;
+ }
+ printf("\t merged array is \n");
+ for(i=0;i<s3;i++)
+ {
+ printf("\t %d \n",c[i]);
+ }
+ /*sort the array in descending order*/
+ for(i=0;i<s3;i++)
+ {
+ for(k=0;k<s3-1;k++)
+ {
+ if(c[k]<=c[k+1])
+ {
+ j=c[k+1];
+ c[k+1]=c[k];
+ c[k]=j;
+ }
+ }
+ }
+ //print the merged  array
+ printf("\t merged array is \n");
+ for(i=0;i<s3;i++)
+ {
+ printf("\t %d \n",c[i]);
+ }
+ getch();
+ }
+
+
+
